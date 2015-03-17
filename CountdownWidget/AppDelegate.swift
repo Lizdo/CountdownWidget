@@ -3,7 +3,7 @@
 //  CountdownWidget
 //
 //  Created by Liz on 15/3/1.
-//  Copyright (c) 2015年 Liz. All rights reserved.
+//  Copyright (c) 2015 Liz. All rights reserved.
 //
 
 import Cocoa
@@ -15,11 +15,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        NSApplication.sharedApplication().terminate(self)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
     }
 
 

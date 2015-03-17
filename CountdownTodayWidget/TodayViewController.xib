@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7519.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="CountdownTodayWidget" customModuleProvider="target">
+            <connections>
+                <outlet property="countdownTextField" destination="KU6-MB-4x2" id="pDq-ac-lGz"/>
+                <outlet property="resetButton" destination="df7-1V-Lfg" id="0Hu-RG-b2w"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="181" simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="-2" width="320" height="148"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KU6-MB-4x2">
+                    <rect key="frame" x="18" y="83" width="284" height="56"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0:00" id="pgq-dU-GDk">
+                        <font key="font" size="48" name="HelveticaNeue-UltraLight"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bs0-sa-cmJ">
+                    <rect key="frame" x="14" y="46" width="94" height="32"/>
+                    <buttonCell key="cell" type="push" title="+1 min" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1De-h9-UeA">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="plus1MinButtonClicked:" target="-2" id="mlY-mU-46g"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BN0-fc-0dW">
+                    <rect key="frame" x="114" y="13" width="92" height="32"/>
+                    <buttonCell key="cell" type="push" title="+ 1 hour" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gLC-9r-VGh">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="plus1HourButtonClicked:" target="-2" id="nk8-Xg-jSj"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="t8J-Y9-EME">
+                    <rect key="frame" x="114" y="46" width="92" height="32"/>
+                    <buttonCell key="cell" type="push" title="+ 5 min" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u7V-aY-XON">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="plus5MinButtonClicked:" target="-2" id="c8E-em-Ceb"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jXu-L6-Dv6">
+                    <rect key="frame" x="14" y="13" width="94" height="32"/>
+                    <buttonCell key="cell" type="push" title="+ 30 min" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hkw-DJ-sxc">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="plus30MinButtonClicked:" target="-2" id="rJ5-Xw-cNy"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="df7-1V-Lfg">
+                    <rect key="frame" x="230" y="13" width="76" height="32"/>
+                    <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kku-dl-Vjg">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="resetButtonClicked:" target="-2" id="XGm-Hk-5fn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Bs0-sa-cmJ" firstAttribute="leading" secondItem="KU6-MB-4x2" secondAttribute="leading" id="1xI-0r-A5C"/>
+                <constraint firstItem="t8J-Y9-EME" firstAttribute="trailing" secondItem="BN0-fc-0dW" secondAttribute="trailing" id="8TZ-UP-2Lr"/>
+                <constraint firstItem="t8J-Y9-EME" firstAttribute="baseline" secondItem="Bs0-sa-cmJ" secondAttribute="baseline" id="98x-Uq-ecm"/>
+                <constraint firstItem="Bs0-sa-cmJ" firstAttribute="trailing" secondItem="jXu-L6-Dv6" secondAttribute="trailing" id="BxS-Lg-JEi"/>
+                <constraint firstItem="KU6-MB-4x2" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="9" id="Dlz-KB-wLA"/>
+                <constraint firstItem="Bs0-sa-cmJ" firstAttribute="top" secondItem="KU6-MB-4x2" secondAttribute="bottom" constant="9" id="DpC-bE-LjI"/>
+                <constraint firstItem="BN0-fc-0dW" firstAttribute="baseline" secondItem="jXu-L6-Dv6" secondAttribute="baseline" id="Nvl-jO-926"/>
+                <constraint firstAttribute="trailing" secondItem="KU6-MB-4x2" secondAttribute="trailing" constant="20" symbolic="YES" id="Pnk-Q4-vOq"/>
+                <constraint firstAttribute="bottom" secondItem="jXu-L6-Dv6" secondAttribute="bottom" constant="20" symbolic="YES" id="Vex-4q-AEm"/>
+                <constraint firstItem="BN0-fc-0dW" firstAttribute="baseline" secondItem="df7-1V-Lfg" secondAttribute="baseline" id="W6g-Kc-uDI"/>
+                <constraint firstItem="jXu-L6-Dv6" firstAttribute="leading" secondItem="Bs0-sa-cmJ" secondAttribute="leading" id="aNO-Om-8iq"/>
+                <constraint firstItem="KU6-MB-4x2" firstAttribute="trailing" secondItem="df7-1V-Lfg" secondAttribute="trailing" id="fhs-qX-R2Y"/>
+                <constraint firstItem="KU6-MB-4x2" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="iw4-IY-B4q"/>
+                <constraint firstItem="t8J-Y9-EME" firstAttribute="centerX" secondItem="KU6-MB-4x2" secondAttribute="centerX" id="qLn-Mh-nOL"/>
+                <constraint firstItem="BN0-fc-0dW" firstAttribute="leading" secondItem="t8J-Y9-EME" secondAttribute="leading" id="qec-wh-8er"/>
+                <constraint firstItem="jXu-L6-Dv6" firstAttribute="top" secondItem="Bs0-sa-cmJ" secondAttribute="bottom" constant="12" symbolic="YES" id="tlg-k8-rX4"/>
+            </constraints>
+            <point key="canvasLocation" x="413" y="404"/>
+        </customView>
+    </objects>
+</document>

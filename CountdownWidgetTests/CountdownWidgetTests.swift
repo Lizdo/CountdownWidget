@@ -3,7 +3,7 @@
 //  CountdownWidgetTests
 //
 //  Created by Liz on 15/3/1.
-//  Copyright (c) 2015年 Liz. All rights reserved.
+//  Copyright (c) 2015 Liz. All rights reserved.
 //
 
 import Cocoa
